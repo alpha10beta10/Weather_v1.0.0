@@ -1,6 +1,6 @@
 import './App.css';
 import '@fontsource/roboto';
-import { Box, TextField, Button, CircularProgress, InputAdornment, FormControlLabel, Typography, Paper, Card, CardContent, CardMedia, CardHeader } from '@mui/material';
+import { Box, TextField, Button, CircularProgress, InputAdornment, FormControlLabel, Typography, Paper} from '@mui/material';
 import { LocationOn } from '@mui/icons-material';
 import { makeStyles } from '@mui/styles';
 import { useState, useEffect } from 'react';
@@ -50,11 +50,10 @@ const useStyles = makeStyles({
 function App() {
 
 const classes = useStyles();
-const [ getting, setGetting ] = useState(false);
-const [ code, setCode ] = useState("");
 
-const [ info, setInfo ] = useState(null);
-const [ location, setLocation ] = useState("east london");
+
+
+const location = useState("east london");
 const [error, setError] = useState(false);
 const [text, setText ] =useState("");
 const [loading, setLoading] = useState(true);
@@ -84,8 +83,6 @@ const handleSubmit=(e)=>{
       setLoading(false);
       setError(false);
       setData(data);
-      
-      console.log({...data});
   })
   .catch( err =>{
       setLoading(false);
