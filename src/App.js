@@ -130,7 +130,7 @@ const handleSubmit=(e)=>{
                    <Typography sx={{margin: "0.9rem 0", letterSpacing:"1px" , fontSize:"20px"}}><LocationOn />{ data.name }, { data.sys.country}</Typography>
                    
                    <Paper sx={{ minWidth: 136, padding:"0.4rem 1rem" }} component="div" className={ classes.info }>
-                    <Typography align="center">{ data.weather[0].description}</Typography>
+                    <Typography color="primary" align="center">{ data.weather[0].description}</Typography>
                      <Typography component="div" align="center" sx={{ width: 50, height: 50, margin:0, padding:0}}>
                         <img alt="icon" src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}/>
                      </Typography>
