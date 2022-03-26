@@ -123,7 +123,7 @@ const handleSubmit=(e)=>{
             { error &&<p>{ error }</p>}
             
             <Button  size="small" type="submit" variant="contained" disableElevation color="primary">search</Button >
-             <Button color="secondary">Asenathi</Button>
+             <Button variant="contained" color="secondary">Asenathi</Button>
             </Box>
             
             { data && 
